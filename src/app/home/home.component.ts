@@ -39,10 +39,10 @@ export class HomeComponent implements OnInit {
     console.log(this.availableSlots);
   }
   addIncomingCarDetails() {
-    const slotno = this.availableSlots.indexOf('A');
+    const slotno = this.availableSlots.indexOf('A') + 1;
     this.availableCarDetails.push(
       { 'regno': this.newCarNumber, 'color': this.newCarColor, 'slotno': slotno });
-    this.availableSlots[slotno] = 'N';
+    this.availableSlots[slotno - 1] = 'N';
   }
   removeCar(index, slotno) {
     console.log(index);
